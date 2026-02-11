@@ -33,12 +33,17 @@ function closeSearch() {
 function openMenu() {
     document.getElementById("mobileMenu").classList.remove("translate-x-full");
     document.getElementById("menuOverlay").classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // Empêche de scroller la page derrière
+
 }
 
 function closeMenu() {
     document.getElementById("mobileMenu").classList.add("translate-x-full");
     document.getElementById("menuOverlay").classList.add("hidden");
+    document.body.style.overflow = ""; // Réactive le scroll
+
 }
+
 
 
 
@@ -65,7 +70,7 @@ window.addEventListener("scroll", () => {
                 "top-0",
                 "left-0",
                 "w-full",
-                "z-50",
+                "z-[1000]",
                 "bg-white",
                 "shadow-md"
             );
@@ -89,7 +94,7 @@ window.addEventListener("scroll", () => {
                 "top-0",
                 "left-0",
                 "w-full",
-                "z-50",
+                "z-[1000]",
                 "bg-white",
                 "shadow-md"
             );

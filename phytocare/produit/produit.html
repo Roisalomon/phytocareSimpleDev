@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Phytocare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <header id="header-bottom"
+        class="bg-white px-[8%] py-3 flex items-center justify-between md:justify-center gap-[8%] z-[100]">
+        <div class="flex-shrink-0">
+            <img src="../img/logohorizontale.png" alt="Phytocare Logo" class="w-[130px] md:w-[150px]" />
+        </div>
+
+        <nav class="hidden xl:flex gap-3 font-serif text-[14px] text-black font-medium">
+            <a href="../index.html" class="px-3 py-1 transition-all hover:text-[#034949] hover:scale-105">Accueil</a>
+            <a href="#" class="px-3 py-1 transition-all hover:text-[#034949] font-bold">Produits</a>
+            <a href="../maladie/maladie.html"
+                class="px-3 py-1 transition-all hover:text-[#034949] hover:scale-105">Maladies</a>
+            <a href="../A propos/A propos.html" class="px-3 py-1 transition-all hover:text-[#034949] hover:scale-105">A
+                propos</a>
+            <a href="../contact/contact.html" class="px-3 py-1 text-[#034949] ">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <a href="https://wa.me/22997000000" target="_blank"
+                class="hidden md:inline-flex bg-[#2F5D3A] text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition">
+                Commander <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <button onclick="openMenu()" class="xl:hidden bg-[#2F5D3A] text-white p-2 rounded">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="relative h-[40vh] min-h-[300px] flex items-center px-[8%] overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/4033636/pexels-photo-4033636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Boutique Phytocare" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <div class="relative z-10 w-full animate-fade-in-up text-white">
+            <nav class="flex mb-4 text-sm md:text-base opacity-90">
+                <ol class="flex items-center space-x-2">
+                    <li><a href="../index.html" class="hover:text-green-400 transition">Accueil</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="font-semibold">Produits</li>
+                </ol>
+            </nav>
+            <h1 class="text-4xl md:text-6xl font-bold">Nos Solutions Naturelles</h1>
+        </div>
+    </section>
+
+    <main class="py-20 bg-[#FAFBF8]">
+        <div class="mx-[8%]">
+
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#2F5D3A] mb-4 font-serif">
+                    Parcourez notre gamme
+                </h2>
+                <p class="text-gray-600 text-lg italic">
+                    Une sélection rigoureuse de plantes pour votre équilibre naturel.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-16">
+                <button onclick="filterProducts('all', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-[#2F5D3A] text-white border-[#2F5D3A] shadow-lg active">
+                    Tout
+                </button>
+
+                <button onclick="filterProducts('immunite', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-gray-100 text-gray-600 border-transparent hover:bg-white hover:border-[#2F5D3A] hover:text-[#2F5D3A]">
+                    Immunité
+                </button>
+
+                <button onclick="filterProducts('digestion', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-gray-100 text-gray-600 border-transparent hover:bg-white hover:border-[#2F5D3A] hover:text-[#2F5D3A]">
+                    Digestion
+                </button>
+
+                <button onclick="filterProducts('energie', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-gray-100 text-gray-600 border-transparent hover:bg-white hover:border-[#2F5D3A] hover:text-[#2F5D3A]">
+                    Énergie
+                </button>
+
+                <button onclick="filterProducts('beaute', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-gray-100 text-gray-600 border-transparent hover:bg-white hover:border-[#2F5D3A] hover:text-[#2F5D3A]">
+                    Beauté
+                </button>
+
+                <button onclick="filterProducts('relaxation', this)"
+                    class="filter-btn relative px-7 py-3 rounded-xl font-semibold text-sm transition-all duration-400 border-2 bg-gray-100 text-gray-600 border-transparent hover:bg-white hover:border-[#2F5D3A] hover:text-[#2F5D3A]">
+                    Relaxation
+                </button>
+            </div>
+
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-300 mt-10 ">
+
+        <!-- ================= FOOTER TOP ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-[8%] py-10">
+
+            <!-- ===== Branding ===== -->
+            <div class="flex flex-col items-start mr-10">
+                <img src="img/logohorizontale.png" alt="Phytocare Logo" class="w-[160px] mb-3" />
+
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6 max-w-[300px]">
+                    Phytocare vous accompagne avec des solutions naturelles,
+                    sûres et efficaces pour améliorer votre santé au quotidien.
+                </p>
+
+                <a href="#" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg
+        hover:bg-[#034949] transition text-sm font-semibold">
+                    Nous contacter
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- ===== Useful Links ===== -->
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-black mb-3">
+                    Liens utiles
+                </h3>
+
+                <div class="flex flex-col gap-y-1 text-sm text-gray-600">
+                    <a href="#" class="hover:text-primary">Produits</a>
+                    <a href="../maladie/maladie.html" class="hover:text-primary">Maladies</a>
+                    <a href="../A propos/A propos.html" class="hover:text-primary">À propos</a>
+                    <a href="#" class="hover:text-primary">FAQ</a>
+                    <a href="../contact/contact.html" class="hover:text-primary">Contact</a>
+                </div>
+            </div>
+
+            <!-- ===== Company ===== -->
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-black mb-3">
+                    Notre entreprise
+                </h3>
+
+                <div class="flex flex-col gap-y-1 text-sm text-gray-600">
+                    <a href="#" class="hover:text-primary">Qui sommes-nous</a>
+                    <a href="#" class="hover:text-primary">Notre vision</a>
+                    <a href="#" class="hover:text-primary">Partenaires</a>
+                    <a href="#" class="hover:text-primary">Carrières</a>
+                </div>
+            </div>
+
+            <!-- ===== Contact ===== -->
+            <div class="mt-6">
+                <h3 class="text-lg font-semibold text-black mb-3">
+                    Contact
+                </h3>
+
+                <div class="flex flex-col gap-y-1 text-sm text-gray-600">
+                    <span>📍 Cotonou, Bénin</span>
+                    <a href="mailto:contact@phytocare.com" class="hover:text-primary">
+                        ✉ contact@phytocare.com
+                    </a>
+                    <a href="tel:+22997000000" class="hover:text-primary">
+                        ☎ +229 97 00 00 00
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- ================= END FOOTER TOP ================= -->
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+        <div class="flex flex-col md:flex-row w-full">
+
+            <!-- LEFT -->
+            <div class="bg-accent w-full md:w-1/2 flex items-center
+            justify-center md:justify-start md:pl-[160px]
+            py-4 text-sm text-black" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%)">
+                <p class="text-center md:text-left">
+                    © 2026 Phytocare — Tous droits réservés
+                </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="bg-accent md:bg-primary w-full md:w-1/2
+              flex items-center md:justify-end md:pr-[100px]
+              py-3 text-sm md:text-white gap-4 flex-wrap" style="clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%)">
+
+                <a href="" terms.html""
+                    class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+                    Conditions
+                </a>
+
+                <span>-</span>
+
+                <a href="#"
+                    class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+                    Confidentialité
+                </a>
+
+                <span>-</span>
+
+                <a href="#"
+                    class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+                    Abonnement
+                </a>
+
+                <span>-</span>
+
+                <a href="#" class="flex flex-col leading-tight">
+                    <span
+                        class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+                        Connexion
+                    </span>
+                    <span
+                        class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+                        Inscription
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+        <!-- ================= END FOOTER BOTTOM ================= -->
+
+    </footer>
+
+
+    <script src="js/produits.js"></script>
+</body>
+
+</html>

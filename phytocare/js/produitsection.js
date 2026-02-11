@@ -25,7 +25,7 @@ function displayProducts(list) {
                 <div class="p-6 text-center">
                     <h3 class="font-bold text-xl text-[#2F5D3A] mb-2">${product.name}</h3>
                     <p class="text-gray-500 text-sm mb-6 line-clamp-2">${product.desc}</p>
-                    <a href="#" class="inline-flex items-center justify-center w-full bg-[#2F5D3A] text-white py-3 rounded-xl font-semibold hover:bg-[#F7C842] hover:text-[#0C1A2A] transition-all duration-300 gap-2">
+                    <a href="produitPlus/${product.id}.html" class="inline-flex items-center justify-center w-full bg-[#2F5D3A] text-white py-3 rounded-xl font-semibold hover:bg-[#F7C842] hover:text-[#0C1A2A] transition-all duration-300 gap-2 shadow-md">
                         Voir plus
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>

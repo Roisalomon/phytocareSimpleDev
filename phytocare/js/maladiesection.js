@@ -27,13 +27,13 @@ function renderDiseases() {
 
             <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#2F5D3A] transition-colors">
                 ${d.title}
-            </h3>
+            </h3> 
 
             <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                 ${d.desc}
             </p>
 
-            <a href="#" class="mt-auto bg-[#2F5D3A] text-white px-6 py-[10px] rounded-[12px] text-[0.875rem] 
+            <a href="maladiePlus/${d.id}.html" class="mt-auto bg-[#2F5D3A] text-white px-6 py-[10px] rounded-[12px] text-[0.875rem] 
                             font-semibold inline-flex items-center gap-2 transition-all duration-300 
                             hover:bg-[#F7C842] hover:text-[#0C1A2A] hover:scale-[1.05]">
                 Lire plus
