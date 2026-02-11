@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Phytocare</title>
+
+  <!-- Tailwind CDN (pour phase UI rapide) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0C1A2A",
+            accent: "#F7C842",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-sans bg-gray-50">
+  <footer class="bg-white mt-24 ">
+
+    <!-- ================= FOOTER TOP ================= -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-[8%] py-16">
+
+      <!-- ===== Branding ===== -->
+      <div class="flex flex-col items-start">
+        <img src="/public/images/phytocare.png" alt="Phytocare Logo" class="w-[160px] mb-5" />
+
+        <p class="text-gray-600 text-[15px] leading-relaxed mb-6 max-w-[300px]">
+          Phytocare vous accompagne avec des solutions naturelles,
+          sûres et efficaces pour améliorer votre santé au quotidien.
+        </p>
+
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg
+        hover:bg-[#034949] transition text-sm font-semibold">
+          Nous contacter
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- ===== Useful Links ===== -->
+      <div>
+        <h3 class="text-lg font-semibold text-black mb-7">
+          Liens utiles
+        </h3>
+
+        <div class="flex flex-col gap-y-5 text-sm text-gray-600">
+          <a href="products.html" class="hover:text-primary">Produits</a>
+          <a href="diseases.html" class="hover:text-primary">Maladies</a>
+          <a href="about.html" class="hover:text-primary">À propos</a>
+          <a href="faq.html" class="hover:text-primary">FAQ</a>
+          <a href="contact.html" class="hover:text-primary">Contact</a>
+        </div>
+      </div>
+
+      <!-- ===== Company ===== -->
+      <div>
+        <h3 class="text-lg font-semibold text-black mb-7">
+          Notre entreprise
+        </h3>
+
+        <div class="flex flex-col gap-y-5 text-sm text-gray-600">
+          <a href="#" class="hover:text-primary">Qui sommes-nous</a>
+          <a href="#" class="hover:text-primary">Notre vision</a>
+          <a href="#" class="hover:text-primary">Partenaires</a>
+          <a href="#" class="hover:text-primary">Carrières</a>
+        </div>
+      </div>
+
+      <!-- ===== Contact ===== -->
+      <div>
+        <h3 class="text-lg font-semibold text-black mb-7">
+          Contact
+        </h3>
+
+        <div class="flex flex-col gap-y-5 text-sm text-gray-600">
+          <span>📍 Cotonou, Bénin</span>
+          <a href="mailto:contact@phytocare.com" class="hover:text-primary">
+            ✉ contact@phytocare.com
+          </a>
+          <a href="tel:+22997000000" class="hover:text-primary">
+            ☎ +229 97 00 00 00
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- ================= END FOOTER TOP ================= -->
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+    <div class="flex flex-col md:flex-row w-full">
+
+      <!-- LEFT -->
+      <div class="bg-accent w-full md:w-1/2 flex items-center
+      justify-center md:justify-start md:pl-[160px]
+      py-4 text-sm text-black" style="clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%)">
+        <p class="text-center md:text-left">
+          © 2026 Phytocare — Tous droits réservés
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="bg-accent md:bg-primary w-full md:w-1/2
+      flex items-center md:justify-end md:pr-[100px]
+      py-3 text-sm md:text-white gap-4 flex-wrap" style="clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%)">
+
+        <a href="terms.html"
+          class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+          Conditions
+        </a>
+
+        <span>-</span>
+
+        <a href="privacy.html"
+          class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+          Confidentialité
+        </a>
+
+        <span>-</span>
+
+        <a href="subscription.html"
+          class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+          Abonnement
+        </a>
+
+        <span>-</span>
+
+        <a href="login.html" class="flex flex-col leading-tight">
+          <span
+            class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+            Connexion
+          </span>
+          <span
+            class="relative hover:after:w-full after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all">
+            Inscription
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+    <!-- ================= END FOOTER BOTTOM ================= -->
+
+  </footer>
+
+
+  <script>
+    /* ================= DROPDOWNS ================= */
+
+    function openDropdown(id) {
+      const el = document.getElementById(id);
+
+      el.classList.remove("opacity-0", "invisible", "-translate-y-2");
+      el.classList.add("opacity-100", "visible", "translate-y-0");
+    }
+
+    function closeDropdown(id) {
+      const el = document.getElementById(id);
+
+      el.classList.add("opacity-0", "invisible", "-translate-y-2");
+      el.classList.remove("opacity-100", "visible", "translate-y-0");
+    }
+
+
+    /* ================= SEARCH MOBILE ================= */
+
+    function openSearch() {
+      document.getElementById("mobileSearch").classList.remove("hidden");
+      document.getElementById("mobileSearch").classList.add("flex");
+    }
+
+    function closeSearch() {
+      document.getElementById("mobileSearch").classList.add("hidden");
+      document.getElementById("mobileSearch").classList.remove("flex");
+    }
+
+
+    /* ================= MOBILE MENU ================= */
+
+    function openMenu() {
+      document.getElementById("mobileMenu").classList.remove("translate-x-full");
+      document.getElementById("menuOverlay").classList.remove("hidden");
+    }
+
+    function closeMenu() {
+      document.getElementById("mobileMenu").classList.add("translate-x-full");
+      document.getElementById("menuOverlay").classList.add("hidden");
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>

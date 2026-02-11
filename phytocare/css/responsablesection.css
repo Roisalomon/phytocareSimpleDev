@@ -1,0 +1,15 @@
+
+    .team-card {
+        animation: teamFadeUp 0.6s ease-out forwards;
+    }
+
+    @keyframes teamFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

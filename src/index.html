@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Phytocare</title>
+
+    <!-- Tailwind CDN (pour phase UI rapide) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0C1A2A",
+                        accent: "#F7C842",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-[#F6F8F6] text-gray-800">
+
+<!-- ================= HERO ================= -->
+<section class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+  <div>
+    <h1 class="text-4xl md:text-5xl font-serif text-[#1F3D2B] leading-tight mb-6">
+      Votre santé,<br>
+      notre priorité naturelle
+    </h1>
+    <p class="text-gray-600 mb-8 max-w-lg">
+      Découvrez nos produits naturels pour prendre soin de votre santé au quotidien.
+      Une sélection rigoureuse pour votre bien-être.
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      <a href="#"
+        class="bg-[#2F6B3F] text-white px-7 py-3 rounded-lg font-medium hover:bg-[#255632] transition">
+        Voir nos produits
+      </a>
+      <a href="#"
+        class="border border-[#2F6B3F] text-[#2F6B3F] px-7 py-3 rounded-lg font-medium">
+        Contacter sur WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <img
+    src="./public/images/produits/phytocare.png"
+    alt="Produits Phytocare"
+    class="rounded-2xl shadow-lg"
+  />
+</section>
+
+<!-- ================= CATEGORIES + FILTRES ================= -->
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-serif text-center mb-4">
+      Nos catégories de produits
+    </h2>
+    <p class="text-center text-gray-500 mb-12">
+      Explorez nos produits naturels par catégorie pour répondre à vos besoins de santé
+    </p>
+
+    <!-- Filtres -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <button onclick="filterCards('all')" class="filter-btn active">Immunité</button>
+      <button onclick="filterCards('digestion')" class="filter-btn">Digestion</button>
+      <button onclick="filterCards('energie')" class="filter-btn">Énergie</button>
+      <button onclick="filterCards('beaute')" class="filter-btn">Beauté</button>
+      <button onclick="filterCards('relaxation')" class="filter-btn">Relaxation</button>
+      <button onclick="filterCards('sommeil')" class="filter-btn">Sommeil</button>
+    </div>
+
+    <!-- Cartes -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="health-card" data-category="relaxation sommeil">
+        <h3>Stress</h3>
+        <p>Apaiser le stress et l’anxiété naturellement.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="sommeil">
+        <h3>Insomnie</h3>
+        <p>Favoriser un sommeil réparateur.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="energie">
+        <h3>Fatigue</h3>
+        <p>Retrouver énergie et vitalité.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="digestion">
+        <h3>Problèmes digestifs</h3>
+        <p>Améliorer le confort digestif.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="energie">
+        <h3>Douleurs articulaires</h3>
+        <p>Soulager les douleurs naturellement.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="digestion">
+        <h3>Hypertension</h3>
+        <p>Équilibrer la tension artérielle.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="immunite">
+        <h3>Immunité faible</h3>
+        <p>Renforcer les défenses naturelles.</p>
+        <button>Voir solutions</button>
+      </div>
+
+      <div class="health-card" data-category="beaute">
+        <h3>Beauté naturelle</h3>
+        <p>Soin naturel de la peau.</p>
+        <button>Voir solutions</button>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-14">
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-[#E3ECE6] rounded-lg">
+        Voir toutes les maladies →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PRODUITS PHARES ================= -->
+<section class="py-20 bg-[#F6F8F6]">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-serif text-center mb-12">
+      Nos produits phares
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="feature-card">Produits 100% naturels</div>
+      <div class="feature-card">Expertise et qualité</div>
+      <div class="feature-card">Satisfaction client</div>
+      <div class="feature-card">Bien-être durable</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= POURQUOI PHYT0CARE ================= -->
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h2 class="text-3xl font-serif mb-6">Pourquoi choisir Phytocare</h2>
+      <p class="text-gray-600 mb-8">
+        Phytocare offre des produits de santé naturels et de qualité pour améliorer votre bien-être au quotidien.
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="info-card">Produits naturels</div>
+        <div class="info-card">Expertise reconnue</div>
+        <div class="info-card">Clients satisfaits</div>
+      </div>
+    </div>
+
+    <img src="./public/images/produits/phytocare.png" class="rounded-xl shadow-lg" />
+  </div>
+</section>
+
+<!-- ================= EQUIPE ================= -->
+<section class="py-20 bg-[#F6F8F6]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-serif text-center mb-12">
+      Notre équipe d’experts
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="team-card">Dr. Jean Lefèvre<br><span>Naturopathe</span></div>
+      <div class="team-card">Marie Durand<br><span>Phytothérapeute</span></div>
+      <div class="team-card">David Martin<br><span>Nutritionniste</span></div>
+      <div class="team-card">Sophie Bernard<br><span>Aromathérapeute</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-20 bg-gradient-to-r from-[#1F3D2B] to-[#2F6B3F] text-white text-center">
+  <h3 class="text-2xl font-serif mb-6">
+    Votre santé mérite le meilleur
+  </h3>
+  <a href="#" class="inline-flex items-center gap-2 bg-[#2F6B3F] px-8 py-4 rounded-lg">
+    Commander sur WhatsApp
+  </a>
+</section>
+
+<!-- ================= FILTRE INLINE ================= -->
+<script>
+function filterCards(category) {
+  const cards = document.querySelectorAll('.health-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  cards.forEach(card => {
+    const cats = card.dataset.category;
+    if (category === 'all' || cats.includes(category)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>
